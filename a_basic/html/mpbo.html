@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<!-- mpbo.html -->
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="../css/src/mpbo.css" />
+    <title>웹기초 - 여백,선</title>
+    <link rel="shortcut icon" href="../img/icon_01.png" type="image/png" />
+    <link rel="apple-touch-icon" href="../img/icon_01.png" />
+  </head>
+  <body>
+    <!-- layout -->
+    <div id="wrap">
+      <h2>nth-child</h2>
+      <p>연속되어진 요소를 선택할 때 사용하는 선택자</p>
+      <ol class="nth_01">
+        <li>nth-c</li>
+        <li>nth-c</li>
+        <li>nth-c</li>
+        <li>nth-c</li>
+        <li>nth-c</li>
+      </ol>
+
+      <h1><a href="./contents.html">웹기초</a></h1>
+      <hr />
+      <h2>margin</h2>
+      <div class="part margin">
+        <ul>
+          <li>margin_01</li>
+          <li>margin_02</li>
+          <li>margin_03</li>
+          <li>margin_04</li>
+          <li>margin_05</li>
+          <li>margin_06</li>
+          <li>margin_07</li>
+        </ul>
+      </div>
+      <!-- // .part margin -->
+      <div class="part padding">
+        <div class="padding_sample">
+          <div class="insert_p">내용작성</div>
+        </div>
+        <ul>
+          <li>padding_01</li>
+          <li>padding_02</li>
+          <li>padding_03</li>
+          <li>padding_04</li>
+          <li>padding_05</li>
+          <li>padding_06</li>
+          <li>padding_07</li>
+        </ul>
+      </div>
+      <!-- // .part padding -->
+      <div class="part mp_sample">
+        <p>margin과 padding의 쓰임새를 파악해보기</p>
+        <p>
+          하나의 요소내에서 첫번째 존재하는 요소가 float,position처리되어 있지
+          않다면, margin-top값을 사용할 경우에는 자신이 아닌 부모요소를
+          margin처리하게 된다.
+        </p>
+        <p>
+          margin값이 위,아래 겹쳐있는 경우에는 값이 큰 요소만 처리된다. (단,
+          float처리된 겹침은 제외)
+        </p>
+        <p>
+          margin값은 눈에 보이는 공간의 거리를 조절하는 기능이기에 +가 아닌
+          -값으로 처리가 가능하다.
+        </p>
+        <p>
+          단, margin값은 auto, 좌우에 한해서는 %값 처리가 가능하지만, 위/아래는
+          %사용을 지양한다.
+        </p>
+        <p>
+          float기능과 margin기능을 같이 사용할 경우, margin:auto는 좌/우 가운데
+          배치가 되지 않는다.
+        </p>
+        <div class="part border">
+          <ul>
+            <li>border_01</li>
+            <li>border_02</li>
+            <li>border_03</li>
+            <li>border_04</li>
+            <li>border_05</li>
+            <li>border_06</li>
+            <li><span>border_07</span></li>
+          </ul>
+        </div>
+        <!-- // .part border -->
+        <div class="part outline">
+          <ul>
+            <li>outline_01</li>
+            <li><a href="#">outline_02</a></li>
+            <li><button type="button">outline_03</button></li>
+            <div tabindex="1">outline_04</div>
+          </ul>
+        </div>
+        <!-- // .part outline -->
+        <div class="part box_sizing">
+          <div>content-box</div>
+          <div>border-box</div>
+        </div>
+        <!-- // .part box_sizing -->
+      </div>
+      <!-- // .part mp_sample -->
+    </div>
+    <!-- //  wrap -->
+
+    <!-- script -->
+    <script></script>
+  </body>
+</html>

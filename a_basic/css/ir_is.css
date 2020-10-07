@@ -1,0 +1,73 @@
+@charset "UTF-8";
+
+/* design.css */
+ 
+#wrap { width:900px; height:auto; margin:auto; min-height:1000px; margin-bottom:500px; background-color:#ddd; }
+
+h1 { width:100%; height:30px; font-size:1.5rem; background-color:#caa; }
+h2 { margin-bottom:1rem; }
+
+.part { width:90%; height:auto; padding:2rem; box-sizing:border-box; border:1px solid #333; }
+.part ul { width:100%; height:auto; margin:0; padding:0; list-style:none; }
+.ir ul li { width:100px; height:100px; margin-bottom:1rem; background-color:#770; }
+
+.ir a { display:block; width:100%; height:100%; border-radius:100%; background-color:#fff;  }
+
+.ir li:nth-child(1) a{ display:none; }
+.ir li:nth-child(2) span{ display:none; }
+.ir li:nth-child(3) a{ font-size:0; } /* 글씨크기조정: !important, js를 통해 inline style 설정으로 보여질 수 있다. */
+.ir li:nth-child(4) a{ text-indent:-9999px; position: absolute; z-index:-1; } /* 첫줄 들여쓰기: 현재 가장 많이 사용하는 기법- 브라우저가 커지고있는 현시점에는 다소 아쉬운 방법 */
+
+.ir li:nth-child(5) span { display:block; position: absolute; z-index:-1; width:0; height:0; overflow: hidden; }
+/* 다양한 기법을 섞어쓰기 쉬운 기법
+- css를 제거하지 않으면 볼 수 없는 단점
+- 요소를 중첩해서 사용해야하는 불편함 */
+
+.ir li a { background-image: url(../img/icon/home--v3.png); background-repeat: no-repeat; background-position:50% 50%; background-size:contain; }
+
+
+/* IR기법이란 
+글씨를 숨기고, 이미지로 그 형태를 대처하여 사용하게 만드는 기법
+1. 단순글씨의 일부를 숨기는 방법 
+2. 이미지를 사용하고 글씨를 숨기는 방법
+3. 아이콘으로 대처하는 방법
+4. 단 ir기법은 내용을 읽어주는 것을 기본 조건으로 본다.
+display:none형식은 읽을 수 없으며, 존재를 지워주는 형태로 인식하므로 사용x
+*/
+
+/* ========================= */
+.clearfix:after,
+.clearfix::after { content:" "; display:block; clear: both;}
+.is { width:100%; height:auto; padding:10px; box-sizing: border-box; background-color:#fcc; }
+.is li { width:102px; height:107px; background-color:#fc5; float:left; margin:5px;}
+.is a { display:block; width:100%; height:100%; }
+.is button { display:block; width:100%; height:100%; border:0; background-color: transparent; cursor: pointer; }
+
+.is li:nth-child(n + 1):nth-child(-n + 5), 
+.is li>a, 
+.is li>button
+{ background-image: url("../img/icon/images\ \(1\).png"); 
+background-repeat: no-repeat; }
+
+.is li:nth-child(1) { background-position:0 0;}
+
+._is {  width:100% height:723px; background-color:#fff; list-style: none; }
+._is li { float:left;  width:77px; height:77px; background-color: tomato; margin:28px; }
+.side_img { float: left;  left:0;  bottom:0; width:238px; height:723px; background-color: violet; padding:0; margin:0; padding-right:28px; box-sizing: border-box; }
+._is li:first-child {   margin-left:28px; left:266px; top:11px; }
+
+/* 각 하나의 이미지적용할 때 background-position: 오른쪽으로 갈때 예)50px줘도 오른쪽으로 간다.. */
+._is li { border-radius:10px; }
+._is li a { background-image: url(../img/ikonate2.png); background-repeat:no-repeat;  }
+._is li:nth-child(1) a { background-position:-266px -11px; }
+._is li:nth-child(2) a { background-position:-475px -11px; }
+._is li:nth-child(3) a { background-position:-684px -11px; }
+._is li:nth-child(4) a { background-position:-370px -325px; }
+._is li:nth-child(5) a { background-position:-579px -429px; }
+._is li:nth-child(6) a { background-position:-684px -429px; }
+._is li:nth-child(7) a { background-position:-996px -429px; }
+
+._is li a:hover { background-image:url(../img/ikonate2_black.png); }
+
+.hidden_wrap a { display:block; height:100%; height:100%; }
+.hidden_wrap a>span { display:block; width:0; height:0; overflow: hidden; }

@@ -1,0 +1,25 @@
+@charset "UTF-8";
+/* selector_01.css */
+
+body {background-color: #fafafa;}
+
+h1 {width:400px; height:400px; background-color: #fca; }
+ul > li {border-width:1px; border-style:solid; border-color:#f7a; }
+ol > li {background-image: linear-gradient(45deg, #cfa, #ca7); }
+
+li > div > a {color:#ff0; }
+a {background-color:#333; color:#fff; }
+
+div.wrap {width:80%; background-color:#ccc; border:2px solid #7fa; }
+.wrap {background-color: #ca7; }
+#outer {background-color: #dee; }
+
+
+
+/* 선택자는 기본: 나중에 작성한 내용을 기준으로 처리되어야 한다.
+   하지만, 기본 타입선택자 < class선택자 < id선택자 < 자손 또는 자식선택자
+   < 인라인선택자(js를 통한) https://opentutorials.org/module/484/4149 */ 
+
+
+.nth {width:100px; height:auto;}
+.nth > li:nth-child(2n -1) {background-color:#ccc; }

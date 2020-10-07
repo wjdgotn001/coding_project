@@ -1,0 +1,40 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gaegu&family=Indie+Flower&display=swap');
+@import url('../../fonts/korail_2007/korail_2007.css');
+
+@font-face { 
+  font-family: 'Bazzi'; 
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/Bazzi.woff') format('woff'); 
+  font-weight: normal; 
+  font-style: normal; }
+
+
+#wrap { width:80%; min-width:700px; height:auto; min-height:400px; margin:auto; background-color:#ddd;  }
+
+.part { width:90%; height:auto; padding:30px; box-sizing: border-box; border:2px solid #777; margin:10px auto;
+border-left-width:0; border-right-width:0; }
+
+h3 { color:#057; }
+p { font-size:1.2rem; background-color: transparent; }
+
+.google_font p { font-family: 'Indie Flower', 'Gaegu', cursive; }
+.noonnu_font p { font-family: 'Bazzi'; }
+.korail2007_font p { font-family: 'Korail2007'; }
+
+.other { background-color:#fff; }
+.other ul { width:100%; height:auto; }
+.other li { width:200px; height:20px; margin-bottom:5rem; border:var(--border-line1); }
+ .other li:nth-child(1) { white-space:nowrap; }
+ .other li:nth-child(2) { word-break:keep-all; }
+ .other li:nth-child(3) { white-space:nowrap; overflow: hidden; text-overflow: ellipsis; }
+ .other li:nth-child(4) { text-transform:capitalize; }
+ .other li:nth-child(5) { width:100%; white-space:nowrap; }
+
+ /* 
+ text-overflow는 넘치는 영역을 말줄임표시의 여부를 체크하는 기능
+ *조건 1. white-space:nowrap;
+  2. 감싸는 영역이 사이즈를 가질 것 (block)
+  3. 감싸는 영역이 넘칠경우 숨김 ( overflow:hidden)
+  4. text-overflow:ellipsis;
+ */

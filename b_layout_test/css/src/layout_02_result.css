@@ -1,0 +1,10 @@
+
+/* layout_02_result.css */
+/* design.css */
+@import url("../src/layout_02/layout_02_result-wrap.css");
+@import url("../src/layout_02/layout_02_result-headBox.css");
+@import url("../src/layout_02/layout_02_result-adviewBox.css");
+@import url("../src/layout_02/layout_02_result-localNavBox.css");
+@import url("../src/layout_02/layout_02_result-content_area.css");
+@import url("../src/layout_02/layout_02_result-miniAdBox.css");
+@import url("../src/layout_02/layout_02_result-footBox.css");

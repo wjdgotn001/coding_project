@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<!-- layout_02_result.html -->
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="../fonts/fontawesome_5/css/all.css">
+    <link rel="stylesheet" href="../css/base/reset.css">
+    <link rel="stylesheet" href="../css/base/common.css">
+    <link rel="stylesheet" href="../css/base/layout_02_variable.css">
+    <link rel="stylesheet" href="../css/src/layout_02_result.css" />
+
+    <!-- 
+    <link rel="stylesheet" href="../css/src/layout_02/layout_02_result-wrap.css" />
+    <link rel="stylesheet" href="../css/src/layout_02/layout_02_result-headBox.css" />
+    <link rel="stylesheet" href="../css/src/layout_02/layout_02_result-adviewBox.css" />
+    <link rel="stylesheet" href="../css/src/layout_02/layout_02_result-localNavBox.css" />
+    <link rel="stylesheet" href="../css/src/layout_02/layout_02_result-content_area.css" />
+    <link rel="stylesheet" href="../css/src/layout_02/layout_02_result-miniAdBox.css" />
+    <link rel="stylesheet" href="../css/src/layout_02/layout_02_result-footBox.css" /> 
+    -->
+
+    
+    <!-- [if IE]>
+      <script src="../ie/modernizr-custom.js"></script>
+      <link rel="shortcut icon" href="../img/icon_01.png" type="image/png" />
+    <![endif]-->
+    <title>layout_02_result</title>
+    <!-- cc:ie -->
+    <link rel="shortcut icon" href="../img/icon_01.png" type="image/png" />
+    <link rel="apple-touch-icon" href="favicon.png" />
+  </head>
+  <body>
+    <!-- layout -->
+    <div id="wrap">
+      <div id="headBox">
+        <h1 class="main_heading">site name</h1>
+        <div class="navigation">
+          <!-- navigation -->
+          <ul class="clearfix">
+            <li>nav_01</li>
+            <li>nav_02</li>
+            <li>nav_03</li>
+            <li>nav_04</li>
+            <li>nav_05</li>
+          </ul>
+        </div>
+        <div class="member">member</div>
+      </div>
+      <!-- // #headBox===========-->
+      <div id="adViewBox">
+        <!-- 광고영역 -->
+        <div class="view_btn">
+          <button type="button" class="next_view">
+            <i class="fas fa-chevron-right"></i>
+            <span class="hidden_context">다음 광고 내용보기</span>
+          </button>
+          <button type="button" class="prev_view">
+            <i class="fas fa-chevron-left"></i>
+            <span class="hidden_context">이전 광고 내용보기</span>
+          </button>
+        </div>
+        <div class="view_indicator">
+          <!-- 광고 순서 확인 -->
+          <ol class="clearfix">
+            <li><a href="#" class="action"><span class="hidden_context">광고 1의 간단 설명</span></a></li>
+            <li><a href="#"><span class="hidden_context">광고 2의 간단 설명</span></a></li>
+            <li><a href="#"><span class="hidden_context">광고 3의 간단 설명</span></a></li>
+            <li><a href="#"><span class="hidden_context">광고 4의 간단 설명</span></a></li>
+            <li><a href="#"><span class="hidden_context">광고 5의 간단 설명</span></a></li>
+            <li><a href="#"><span class="hidden_context">광고 6의 간단 설명</span></a></li>
+          </ol>
+        </div>
+        <div class="view_outer">
+          <!-- 광고 내용 -->
+          <div class="view_area">
+            <div class="view_01">광고 01</div>
+            <div class="view_02">광고 02</div>
+            <div class="view_03">광고 03</div>
+            <div class="view_04">광고 04</div>
+            <div class="view_05">광고 05</div>
+            <div class="view_06">광고 06</div>
+          </div>
+        </div>
+      </div>
+      <!-- // #adViewBox========= -->
+      <div id="localNavBox">
+
+        <div class="local_view_btn">
+          <button type="button" class="local_next_button">
+            <i class="fas fa-arrow-right"></i>
+          </button>
+          <button type="button" class="local_prev_button">
+            <i class="fas fa-arrow-left"></i>
+          </button>
+        </div>
+
+        <div class="local_nav_outer">
+           <!-- local_navigation -->
+          <ul class="clearfix">
+            <li>local_nav_01</li>
+            <li>local_nav_02</li>
+            <li>local_nav_03</li>
+            <li>local_nav_04</li>
+            <li>local_nav_05</li>
+            <li>local_nav_06</li>
+          </ul>
+        </div>
+      </div>
+      <!-- // #localNavBox========= -->
+      <div class="content_area">
+        <!-- content -->
+        <div id="popularContentBox"> 
+          <h3>인기 내용</h3>
+          <div class="con_area pop_con_area clearfix">
+            <div class="pop_card">
+              <div class="img_context">img</div>
+              <div class="narr_context">narr</div>
+            </div>
+            <div class="pop_card">
+              <div class="img_context">img</div>
+              <div class="narr_context">narr</div>
+            </div>
+            <div class="pop_card">
+              <div class="img_context">img</div>
+              <div class="narr_context">narr</div>
+            </div>
+          </div>
+        </div>
+        <!-- // #popularContentBox========= -->
+        <div id="newContentBox">
+          <h3>최신 내용</h3>
+          <div class="con_area new_con_area clearfix">
+            <div class="new_con_title_area">
+              <div class="new_con_title_img"></div>
+              <div class="new_con_title_text"></div>
+            </div>
+            <div class="new_con_more_area">
+              <div class="new_con_more"></div>
+            </div>
+          </div>
+        </div>
+        <!-- // #newContentBox========= -->
+        <div id="recommendedContentBox">
+          <h3>추천 내용</h3>
+          <div class="con_area recom_con_area clearfix">
+            <ul>
+              <li>re_con_part_area</li>
+              <li>re_con_part_area</li>
+              <li>re_con_part_area</li>
+              <li>re_con_part_area</li>
+            </ul>
+          </div>
+        </div>
+        <!-- // #recommendedContentBox========= -->
+        <div id="communityBox">
+          <h3>community</h3>
+          <div class="con_area community_area"></div>
+        </div>
+        <!-- // #communityBox========= -->
+      </div>
+      <!-- // .content_area========= -->
+      <div id="miniAdBox">
+        <div class="mini_ad_outer"></div>
+      </div>
+      <!-- // #miniAdBox========= -->
+      <div id="footBox">
+        <div class="foot_outer"></div>
+      </div>
+      <!-- // #footBox========= -->
+    </div>
+    <!-- #wrap -->
+
+    <!-- script -->
+  </body>
+</html>

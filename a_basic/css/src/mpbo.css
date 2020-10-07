@@ -1,0 +1,298 @@
+@charset "UTF-8";
+/* mpbo.css */
+/* 내용진행하기 앞서 기본margin,padding요소를 지우고 시작하기 */
+html,
+body,
+h1,
+h2,
+p,
+ul,
+hr {
+  margin: 0;
+  padding: 0;
+}
+
+#wrap {
+  width: 1100px;
+  height: auto;
+  padding-top: 10px;
+  min-height: 1200px;
+  background-color: #ddd;
+}
+
+h1 {
+  width: 300px;
+  height: 40px;
+  background-color: aqua;
+  margin: auto;
+  margin-bottom: 20px;
+}
+.part {
+  width: 100%;
+  height: 700px;
+  border: 1px solid #777;
+}
+.part > ul {
+  width: 100%;
+  height: 100%;
+  list-style: none;
+}
+.part > ul > li {
+  float: left;
+  width: 100px;
+  height: 100px;
+  border: 1px solid #0af;
+  text-align: center;
+  line-height: 100px;
+}
+/*  
+margin:요소와 요소 사이의 거리(눈에 보이는 공간)
+margin:10px; 위,오른쪽,아래,왼쪽방향 모두 동일한(10px) 여백을 가진다.
+margin:10px 30px; 위/아래(10px), 좌/우(30px)로 값을 각각 분배하여 여백을 가진다.
+margin:10px 30px 50px; 위(10px), 좌/우(30px), 아래(50px)로 값을 각각 분배하여 여백을 가진다.
+margin:10px 30px 50px 100px; 위부터 시계방향으로 각각 여백을 가진다.
+margin-방향: 원하는 방향을 기준으로 여백을 가진다.
+단, margin을 중첩하여 사용할 경우에는 겹치는 부분이 나중에 작성한 부분으로 처리되므로, 주의하여 사용할 것!
+*/
+
+.margin li:nth-child(1) {
+  margin: 10px;
+}
+.margin li:nth-child(2) {
+  margin: 10px 30px;
+}
+.margin li:nth-child(3) {
+  margin: 10px 30px 50px;
+}
+.margin li:nth-child(4) {
+  margin: 10px 30px 50px 100px;
+}
+.margin li:nth-child(5) {
+  margin: 0 0 0 100px;
+}
+.margin li:nth-child(6) {
+  margin-top: 50px;
+  margin-left: 50px;
+}
+.margin li:nth-child(7) {
+  margin: 0;
+  margin-top: 70px;
+}
+/* ============================== */
+.padding ul li {
+  text-align: left;
+  line-height: 20px;
+}
+.padding ul li:nth-child(2n) {
+  background-color: lightcoral;
+}
+.padding ul li:nth-child(2n-1) {
+  background-color: lightskyblue;
+}
+.padding_sample {
+  padding: 50px;
+  width: 300px;
+  height: 150px;
+  background-color: lightyellow;
+}
+.insert_p {
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+}
+
+/* 
+padding: 요소의 부피를 키워서 공간을 확보하는 형태 (스스로 커진다)
+         width,height값은 변하지 않지만, 외부에서 보이는 형태는 width,height가 변한 것처럼 보이게 처리된다.
+padding:20px; 위,오른쪽,아래,왼쪽으로 모두 공간 면적을 만든다.
+padding:20px 40px; 위/아래(20px) 좌/우(40px) 공간 면적을 만든다.
+padding:10px 30px 100px; 위(10px) 좌/우(30px) 아래(100px)
+padding:10px 20px 30px 40px; 위(10px) 오른쪽(20px) 아래(30px) 왼쪽(40px)
+padding-방향:50px; 사용된 방향만 별도의 공간 면적을 가진다.
+단, 전체의 값을 먼저 사용하고 후에 일부형태를 사용한다.
+*/
+
+.padding ul li:nth-child(1) {
+  padding: 20px;
+}
+.padding ul li:nth-child(2) {
+  padding: 20px 40px;
+}
+.padding ul li:nth-child(3) {
+  padding: 10px 30px 100px;
+}
+.padding ul li:nth-child(4) {
+  padding: 10px 20px 30px 40px;
+}
+.padding ul li:nth-child(5) {
+  padding: 10px;
+  padding-bottom: 50px;
+}
+/* ================================================ */
+
+.mp_sample {
+  width: 70%;
+  height: 300px;
+  margin: auto;
+  border: 2px solid #777;
+}
+.mp_sample p {
+  width: 70%;
+  height: 90px;
+  background-color: violet;
+  border-bottom: 1px solid #0af;
+}
+.mp_sample p:nth-of-type(1) {
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+.mp_sample p:nth-of-type(2) {
+  margin-top: 50px;
+}
+.mp_sample p:nth-of-type(4) {
+  width: 50%;
+  margin-left: 50px;
+  margin-top: -20px;
+  background-color: burlywood;
+}
+.mp_sample p:nth-of-type(5) {
+  width: 50%;
+  height: 100px;
+  background-color: crimson;
+  margin-left: 50%;
+}
+
+/* ============================================================ */
+.border ul li:nth-child(1) {
+  border-width: 10px;
+  border-style: dotted; /* solid직선 dotted점선 dashed쇄선 ridghe, double .... */
+  border-color: #f9f;
+}
+.border ul li:nth-child(2) {
+  border: 5px solid #0af;
+}
+.border ul li:nth-child(3) {
+  background-color: darkcyan;
+  border-width: 15px;
+  border-top-width: 3px;
+  border-left-width: 30px;
+  border-bottom-color: bisque;
+  border-style: solid;
+  border-right-style: dashed;
+  border-color: #ddd;
+  border-left-color: cornflowerblue;
+}
+.border ul li:nth-child(4) {
+  border-top: 5px solid #0af;
+  border-bottom: 5px solid #ddd;
+  border-left: none;
+  border-right: none;
+}
+.border ul li:nth-child(5) {
+  border: 30px solid #dfd;
+  border-top-color: red;
+}
+.border ul li:nth-child(6) {
+  width: 0;
+  height: 0;
+  border: 30px solid #f06;
+  border-top-width: 0;
+  border-bottom-width: 50px;
+  border-top-color: transparent;
+  border-left-color: rgba(255, 0, 51, 0);
+  border-right-color: hsla(250, 100%, 50%, 0);
+}
+.border ul li:nth-child(7) {
+  border: 5px solid #f9f;
+  border-left: 0;
+  border-bottom: 0;
+  transform: rotate(45deg);
+}
+.border ul li:nth-child(7) > span {
+  display: block;
+  width: 100%;
+  height: 100%;
+  transform: rotate(-45deg);
+}
+/* =============================================== */
+/* 
+-outline속성은 margin, padding, border와는 다르게 다른요소에 영향을 미치지 않는다.
+-outline속성은 일부 방향성이 없다.
+-단, 기존 선의 위치에서 일부 공간을 만들어서 표기하는 형태만 존재한다.
+-쓰임위치는 대부분 focus를 처리하게 만드는 요소 (a, button, form내부의 요소)에서 주로 사용한다.
+*/
+.outline ul li,
+.outline ul li > button {
+  width: auto;
+  min-width: 100px;
+  cursor: pointer;
+}
+
+.outline li:nth-child(1) {
+  outline: 10px solid #fa0;
+  outline-offset: 5px;
+}
+.outline li:nth-child(2) > a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+/* 
+:focus란? 링크(a), 버튼(input or button), 입력창(input, select)등의 환경에서 마우스가 아닌 키보드로
+          위치를 찾아서 기능을 수행할 때 해당 위치에 나타나는 기능
+ */
+
+.outline li:nth-child(2) > a:focus {
+  outline: 5px solid #fa0;
+}
+.outline li:nth-child(3) > button {
+  display: block;
+  width: 100px;
+  height: 100%;
+  border: 0;
+  background-color: transparent;
+}
+.outline li:nth-child(3) > button:focus {
+  outline: 10px solid #f07;
+}
+.outline div:nth-child(4):focus {
+  outline: 20px solid #0f7;
+}
+/* ==================================================== */
+.box_sizing {
+  width: 80%;
+  height: 400px;
+  margin: 100px auto;
+}
+.box_sizing div {
+  float: left;
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+  padding: 15px;
+  border: 30px solid #999;
+  border-right-color: #0f7;
+  background-color: turquoise;
+}
+.box_sizing div:nth-of-type(1) {
+  box-sizing: content-box;
+}
+.box_sizing div:nth-of-type(2) {
+  box-sizing: border-box;
+}
+/* 
+box-sizing하기 전(before) box-sizing:content-box; 로서 기본형으로 처리
+box-sizing한 후(after) box-sizing:border-box; 로서 border와 padding모두 내부에 처리
+*/
+
+/* =================================================================================== */
+.nth_01 > li {
+  border-bottom: 1px solid #aaa;
+}
+.nth_01 > li:nth-child(1) {
+  background-color: #0f7;
+}
+.nth_01 > li:nth-child(4) {
+  background-color: #f06;
+}

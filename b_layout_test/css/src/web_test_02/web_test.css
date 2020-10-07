@@ -1,0 +1,9 @@
+/* web_test.css */
+/* design.css */
+@import url("./web_test_02_headBox.css");
+@import url("./web_test_02_viewBox.css");
+@import url("./web_test_02_bestBox.css");
+@import url("./web_test_02_recentBox.css");
+@import url("./web_test_02_artworkBox.css");
+@import url("./web_test_02_officalBox.css");
+@import url("./web_test_02_footBox.css");
