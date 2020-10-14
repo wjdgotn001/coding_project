@@ -1,0 +1,15 @@
+
+/* form_02.css */
+
+#wrap { width:960px; height:auto; margin:auto; padding:30px 0; background-color:#ddd; }
+.form_area { width:95%; height:auto; min-height:300px; margin:auto; background-color:#ccc; box-shadow:0 0 5px rgba(12, 9, 9, 0.5); }
+
+form { width:100%; height:auto; min-height:400px; background-color:#fff;
+ padding:30px; box-sizing: border-box; }
+
+ fieldset { height:auto; min-height:100px; padding:10px; margin-bottom:20px; box-sizing: border-box; background-color: darkseagreen; }
+
+/* 
+1.form내부에 들어가는 input,label..inline-block요소(사이즈를 가질 수 있지만 옆으로 늘어나는요소)
+2.form내부에 p,hn,dl,ol,ul...다 들어갈 수 있다.
+*/
