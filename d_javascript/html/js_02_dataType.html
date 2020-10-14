@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<!-- js_02_dataType.html -->
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    var a = 2020;
+    var b = '20a20';
+    var c = parseInt(b); //강제로 숫자변환
+
+    // console.log(a + 1);
+    // console.log(b + 1);
+    // console.log(c + 1);
+    // console.log( typeof(a), a );
+    // console.log( typeof(b), b );
+    // console.log( typeof(c), c + 1 );
+
+    var d = String(a);
+    var typeD = typeof(d);
+    // console.log( typeD, d );
+
+    // parseInt()는 강제로 숫자로 변환하는 기능
+    // 숫자처리가 가능한 부분만 변환한다.
+    // 처음부터 숫자로 변환 되지않으면 값이 도출되지 않는다.
+    // 값을 도출할 수 없는 숫자가 생성( NaN ) 
+
+    // ============================================
+    var t = !!!false;
+    // console.log( typeof(t), t );
+
+    var n = 0;
+    // console.log( !!n );
+    var nn = typeof(n) == 'number';
+    // console.log( nn );
+
+    // !반대의 의미, true앞에 !를 사용하면 false가 된다.
+    // 숫자 0은 false, 숫자1은 true를 의미한다. 
+    // ==은 같다를 의미
+    // ==============================================
+
+    var myName;
+    // console.log( myName ); //값이 정해진 것이 없으므로 미정의
+    // console.log( typeof(myName) ); //형타입 자체가 미정의
+
+    myName = 100;
+    // console.log( myName );
+    // console.log( typeof(myName) );
+
+    myName = '문자로 변경하여 대체'
+    // console.log( myName );
+    // console.log( typeof(myName) );
+
+    myName = null;
+    // console.log( myName );
+    // console.log( typeof(myName) );
+
+    // ===================배열:숫자0부터 시작======================
+    var arr = ['포도', '사과', '키위'];
+    arr[3] = '딸기';
+    arr[0] = '바나나';
+    // console.log( arr[3] );
+
+    var arr2 = [ ['귤', '달래', '포도'], ['오렌지', '키위', '거봉'], 1, 100, null, false ['배고파'] ];
+    // console.log( arr2[1][1] );
+
+    // ====================객체:'속성명':'값'을 가진다(정의) / 순서x========================================
+    var obj = { '귤':'주황색이다', '키위':'시다', '포도':'보라색', 'my Color':'#f06', 'launch':'13:20' };
+    // console.log( obj['귤'] );
+    // console.log( obj['my Color'] );
+    // console.log( obj.launch ); //띄어쓰기 없이 한단어로 정의내릴 때는 '' 사용하지않고 .속성명을 작성한다!
+
+    // 함수는 형태를 먼저 만들고 이를 호출하는 형태
+    var myFn = function(){}; //함수 표현식
+    function myFn2(){}      //함수 선언식
+
+    var FnTest = function(){
+      var n3 = 7;
+      return n3; //결과를 도출(반환)하는 명령어
+    }; 
+    var nResult = FnTest( n3);
+
+  //   var F2 = function(){
+  //     return (7 + 10 + 8) * 2;
+  //   }; 
+  //   console.log( F2() );
+
+  //   var per= function(rel, base){
+  //     return rel / base * 100 + '%';
+  //   };
+  //   console.log( per(5, 50) );
+  //   console.log( per(255, 54321) );
+  // //지역변수 전역변수?
+
+    
+  </script>
+</body>
+</html>
