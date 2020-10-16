@@ -13,3 +13,5 @@ form { width:100%; height:auto; min-height:400px; background-color:#fff;
 1.form내부에 들어가는 input,label..inline-block요소(사이즈를 가질 수 있지만 옆으로 늘어나는요소)
 2.form내부에 p,hn,dl,ol,ul...다 들어갈 수 있다.
 */
+
+input[type="image"] { width:50px; height:auto; }
