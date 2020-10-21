@@ -1,0 +1,22 @@
+
+#wrap { width:100%; min-width: 1700px; height:auto; background-color: rosybrown;}
+
+#headBox { width:100%; height:134px;  background-color:#ddd; }
+  .name { width:100%; height:48px; padding:15px 38px 13px 35px; box-sizing: border-box;   background-color: rosybrown; }
+  .name>span { float: left; }
+  .name ul { float: right; width:150px; height:20px; }
+  .name ul li:nth-child(1) { float: left; margin-right:10px; }
+  .name ul li:nth-child(2) { float: left; margin-right:12px; }
+  .navBox { width:100%; height:86px; }
+
+
+
+
+#viewBox { width:100%; height:646px; background-color: #e9e9e9; }
+#contentBox { width:100%; height:1121px; background-color:#acacac; }
+#logoBox { width:100%; height:925px; background-color:#242424; }
+#newsBox { width:100%; height:254px; background-color:#ccc; }
+#footBox { width:100%; height:410px; background-color: #fff; }
+
+646
+1121

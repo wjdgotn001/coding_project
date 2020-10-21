@@ -6,9 +6,23 @@
 </head>
 <body>
   <h1><a href="./content.html">자바스크립트 기초</a></h1>
+  <label for="year">태어난 해</label>
+  <section id="year">
+  </section>
+
+
   
   <!-- script -->
-  <script src="../js/js_03_operator.js">
+  <script src="../js/js_03_operator.js"></script>
+  <script src="http://unpkg.com/jquery"></script>
+  <script>
+    var y = $('#year');
+    var n = 2020;
+    y.append('<option></option>');
+
+    for(; n>n-200; n--) {
+      
+    }
 
   </script>
 </body>
