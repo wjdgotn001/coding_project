@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .product { 
+      width: 1600px; height:600px; margin:auto;
+      background-color:#dfdfdf;
+      padding:20px 25px; box-sizing: border-box;
+      }
+    .product > div { 
+      width:350px; height: 460px; float: left; 
+      margin-right:50px; border-radius:0.5rem; padding:1rem; box-sizing: border-box;
+      background-color:#fff; 
+       }
+    .product > div:last-of-type { margin-right:0; }
+    .product_img { 
+      width: 100%; height:280px; background-color:#adf;
+      margin-bottom:10px;
+      background-repeat: no-repeat;
+      background-position:50% 50%;
+      background-size: cover;
+      }
+      
+    a { 
+      text-decoration:none;
+      padding:5px 10px; background-color: darkcyan; color:#fff;
+      border-radius:0.3rem; }
+  </style>
+</head>
+<body>
+  <div id="wrap">
+    <h1><a href="./content.html">javascript</a></h1>
+
+    <div class="product">
+    </div>
+  <!-- <script src="../js/js_09_object.js"></script> -->
+  <script src="../data/product.js"></script>
+  <script src="../js/js_09_ex.js"></script>
+</body>
+</html>
