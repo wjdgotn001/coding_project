@@ -1,0 +1,52 @@
+:root{
+  --color-black:#333;
+  --color-deepgreen:#547d77;
+  --color-green:#33b88f;
+}
+
+html, body { width:100%; height:100%; }
+#wrap { 
+  width:100%; min-width:240px; height:auto; min-height:2000px;
+  background-image: linear-gradient(45deg, #fa0 30%, #3af);
+}
+.headBox_wrap {
+  color: #fff;
+  position: fixed; top:0; left:0; right:0; z-index:1000;
+  width:100%; height:auto; background-color:var(--color-black); 
+ }
+#headBox { 
+  width:100%; max-width:1200px; height:40px;
+  padding:0.25rem 0.75rem; box-sizing: border-box; 
+  margin:auto; background-color: var(--color-black); }
+/* #headBox::before { 
+  content:" "; display:block; width:100vw; height:inherit;
+  position: absolute; top:0; left:50%; z-index:-1; transform: translate(-50%);
+  background-color:inherit; } */
+h1 { float: left; width:100px; height:100%; background-color:var(--color-green);}
+#navBox { float: right; width:60px; height:100%; background-color:#fff; }
+
+
+/* mob_v.css  브라우저 320px가로폭 기준으로 작업*/
+@media screen and (max-width:479px) {
+  #headBox { 
+    height:12.5vw; min-height:40px; padding:1.25vw 3.75vw 1.875vw; }
+  #navBox { width:18.75vw; }
+}
+
+/* mob_h.css */
+@media screen and (min-width:480px) and (max-width:767px) {
+  #headBox { height:60px; }
+}
+
+
+/* tab.css */
+@media screen and (min-width:768px) and (max-width:959px) {
+  #headBox { height:60px; }
+}
+
+
+
+/* pc.css */
+@media screen and (min-width:960px) {
+  #headBox { height:60px; }
+}
