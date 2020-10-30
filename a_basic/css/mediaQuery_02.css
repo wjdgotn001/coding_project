@@ -2,7 +2,7 @@
 html, body { width:100%; height:100%; }
 #wrap { width:100%; height:auto; min-height:400px; background-color:#ddd; }
 #max_headBox { width:100%; height:auto; background-color:#acacac; }
-.headBox { width:100%; height:auto; background-color: #333; } 
+.headBox { width:100%; height:auto      ; background-color: #333; } 
 h1 { background-color: #33b88f; }
 .headBox ul li { background-color: #33b88f; }
 .user_icon, .menu_bar { text-align: center; width:6.5625vw; height:7.5vw; }
