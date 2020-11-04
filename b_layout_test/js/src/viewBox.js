@@ -1,11 +1,18 @@
 
 (function($){
   var viewBox = $('#viewBox');
+  viewBox.css ({ 'overflow': 'hidden'});
 
   var backImg = viewBox.find('.back_image');
   var backLi = backImg.find('li');
+  var permission = true; //귀신의 집..?
+
   // 순서 언급 시에는 eq()메소드를 사용한다. 0~ (뒤에서 사용할 때는 -1,-2...fa-js 으로 사용한다.)
   // 복제의 기능은 clone() -> 복제된 기능을 원본처럼 수행하게 하려면 true 매개변수를 입력한다.
+
+
+  var indicator = viewBox.find('.slide_indicator');
+  var indiLi = indicator.find('li');
 
   
   // 마지막요소 복제에 의한 내용변경
@@ -17,6 +24,7 @@
   backImg.css({ 'marginLeft' : -100 + '%' , 'width': reBackLi.length * 100 + '%' }); //viewBox 크기변경
   reBackLi.css({'width': (100 / reBackLi.length) + '%' }); //내부요소 크기변경
 
+  
   // 슬라이드 버튼
   var slideBtn = viewBox.find('.slide_btn');
   var nextSlideBtn = slideBtn.children('button').eq(0); //next버튼
@@ -27,27 +35,62 @@
     // a, button요소처럼 이벤트기능이 내장되어있는 요소는 미리 해당기능을 제거할 필요가 있다. 
     // e에 대한 것을 하지마세요. (preventDefault) 
     e.preventDefault(); // 기존이벤트 제거
-    slideN += 1;
-    // if(){}else{}
-    // 콜백함수 
-    backImg.stop().animate({'left': slideN * -100 + '%' }, function(){
-      if(slideN >= backLi.length-1){
-        slideN = -1;
-        backImg.stop().css({'left': slideN * -100 + '%' });
-      }
-    });
+    if(permission){
+      permission = false;
+      
+      slideN += 1;
+      // if(){}else{}
+      // 콜백함수 
+      backImg.stop().animate({'left': slideN * -100 + '%' }, function(){
+        if(slideN >= backLi.length-1){
+          slideN = -1;
+          backImg.stop().css({'left': slideN * -100 + '%' });
+        }
+        setTimeout(function(){
+          permission=true;
+        }, 100);
+      });
+      indiLi.eq(slideN).siblings().removeClass('action');
+      indiLi.eq(slideN).addClass('action');
+    }
   });
   prevSlideBtn.on('click', function(e){
     e.preventDefault();
-    slideN -= 1;
+   if(permission){ 
+      permission = false;
+      slideN -= 1;
+      backImg.stop().animate({'left': slideN * -100 + '%' }, function(){
+        if(slideN <= -1 ){
+          slideN = backLi.length-1;
+          backImg.stop().css({'left': slideN * -100 + '%' });
+        }
+        setTimeout(function(){
+          permission = true;
+        }, 100);
+      });
+      indiLi.eq(slideN).siblings().removeClass('action');
+      indiLi.eq(slideN).addClass('action');
+    }
+  });
+  // ===========================================================
 
-    backImg.stop().animate({'left': slideN * -100 + '%' }, function(){
-      if(slideN <= -1 ){
-        slideN = backLi.length-1;
-        backImg.stop().css({'left': slideN * -100 + '%' });
-      }
-    })
-  })
+  indiLi.on('click', function(e){
+    e.preventDefault();
+    var its = $(this);
+    slideN = its.index();
+    backImg.stop().animate({ 'left': slideN * -100 + '%' })
+    // indiLi.removeClass('action');
+    indiLi.eq(slideN).siblings().removeClass('action');
+    indiLi.eq(slideN).addClass('action');
+  });
+//  ===============================
+indiLi.children('a').on('focus', function(e){
+  e.preventDefault();
+  var its = $(this);
+  slideN = its.parent().index(); 
+
+});
+
 
 })(jQuery);
 
