@@ -1,0 +1,45 @@
+
+#miniProduct { 
+  position: relative; z-index: 100;
+  width:400px; height:300px; margin:auto; 
+}
+
+.product { 
+  position: absolute; left:0; top:0; z-index: 200;
+  width:500%; height:100%; margin:auto; 
+}
+
+.indicator {
+  position: absolute; top:50%; left:50%; transform: translate(-50%); z-index: 300;
+  width:98%; max-width:400px; height:0; margin-top:-25px;
+}
+.indicator button { 
+  float: left; width:50px; height:50px; 
+}
+.indicator button:nth-child(2) { float: right;}
+.indicator i { font-size:2rem; color:#ddd; }
+
+.product > li { 
+float: left;
+width:20%; height:100%;
+background-repeat: no-repeat;
+background-size: contain;
+background-position: 50% 50%;
+}
+
+.product > li:nth-child(1) { 
+background-image: url(../img/minicake/minicake/tj_minicake_001.jpg);}
+
+.product > li:nth-child(2) { 
+background-image: url(../img/minicake/minicake/tj_minicake_002.jpg);}
+
+.product > li:nth-child(3) { 
+background-image: url(../img/minicake/minicake/tj_minicake_003.jpg);}
+
+.product > li:nth-child(4) { 
+background-image: url(../img/minicake/minicake/tj_minicake_004.jpg);}
+
+.product > li:nth-child(5) {
+background-image: url(../img/minicake/minicake/tj_minicake_005.jpg);}
+
+

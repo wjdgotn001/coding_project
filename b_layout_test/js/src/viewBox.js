@@ -78,7 +78,7 @@
     e.preventDefault();
     var its = $(this);
     slideN = its.index();
-    backImg.stop().animate({ 'left': slideN * -100 + '%' })
+    backImg.stop().animate({ 'left': slideN * -100 + '%' }) 
     // indiLi.removeClass('action');
     indiLi.eq(slideN).siblings().removeClass('action');
     indiLi.eq(slideN).addClass('action');
