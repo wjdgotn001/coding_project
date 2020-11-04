@@ -10,6 +10,9 @@
   //jQuery
   
   var headBox = $('#headBox');
+  var viewBox = $('#viewBox');
+
   headBox.load('./monffee/headBox.html');
+  viewBox.load('./monffee/viewBox.html');
   
 })(jQuery);
