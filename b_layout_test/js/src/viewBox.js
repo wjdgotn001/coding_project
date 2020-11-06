@@ -1,5 +1,43 @@
+// clearInterval(setInterval함수이름);
+
+/*
+var count = 0;
+
+var Go = setInterval(function(){
+  count += 1;
+  console.log(count);
+  if( count > 20 ){
+    clearInterval(Go);
+  }
+}, 1000);
+*/
 
 (function($){
+  var count = 0;
+  var Start;
+
+  var MyCount = function(){
+    Start = setInterval(function(){
+      count +=1;
+      console.log(count);
+    },500 );
+  };
+  // MyCount();
+
+
+  $('h1').on('mouseenter', function(){
+    clearInterval( Start );
+  });
+  $('h1').on('mouseleave', function(){
+    // count = 0; //h1에 갔다가 마우스를 떼었을때 숫자 초기화.
+    // MyCount();
+  });
+
+
+// ================================================
+
+
+
   var viewBox = $('#viewBox');
   viewBox.css ({ 'overflow': 'hidden'});
 
@@ -29,8 +67,12 @@
   var slideBtn = viewBox.find('.slide_btn');
   var nextSlideBtn = slideBtn.children('button').eq(0); //next버튼
   var prevSlideBtn = slideBtn.children('button').eq(1); //prev버튼
-  // console.log(nextSlideBtn,prevSlideBtn);
-  var slideN = 0;
+
+  var slideN = 0; //최초의 값
+  var timed = 2000; //2000 -> 2초 //일정시간마다 처리하는 시간
+
+
+  // 다음버튼클릭 ====================
   nextSlideBtn.on('click', function(e){
     // a, button요소처럼 이벤트기능이 내장되어있는 요소는 미리 해당기능을 제거할 필요가 있다. 
     // e에 대한 것을 하지마세요. (preventDefault) 
@@ -54,6 +96,7 @@
       indiLi.eq(slideN).addClass('action');
     }
   });
+   // 이전버튼클릭 ====================
   prevSlideBtn.on('click', function(e){
     e.preventDefault();
    if(permission){ 
@@ -72,8 +115,7 @@
       indiLi.eq(slideN).addClass('action');
     }
   });
-  // ===========================================================
-
+  // 인디케이터===========================================================
   indiLi.on('click', function(e){
     e.preventDefault();
     var its = $(this);
@@ -83,15 +125,60 @@
     indiLi.eq(slideN).siblings().removeClass('action');
     indiLi.eq(slideN).addClass('action');
   });
-//  ===============================
+// 인디케이터 포커스 처리 ===============================
 indiLi.children('a').on('focus', function(e){
   e.preventDefault();
   var its = $(this);
   slideN = its.parent().index(); 
-
 });
+// 일정시간마다 자동수행/마우스 올릴경우 일시정지 =============================
+var startInterval;
+var Start = function(){
+  startInterval = setInterval(function(){
+   //1. trigger() 기능 -> 대신처리하는 방아쇠역할
+   //nextSlideBtn.trigger('click');
 
+   //2.직접 카운트 처리하여 수행
+   slideN += 1;
+      // if(){}else{}
+      // 콜백함수 
+      backImg.stop().animate({'left': slideN * -100 + '%' }, function(){
+        if(slideN >= backLi.length-1){
+          slideN = -1;
+          backImg.stop().css({'left': slideN * -100 + '%' });
+        }
+      });
+      indiLi.eq(slideN).siblings().removeClass('action');
+      indiLi.eq(slideN).addClass('action');
+  }, timed);
+};
+Start();
 
+var StopSlide = function(){
+  clearInterval( startInterval );
+};
+
+/*
+1. viewBox에 마우스 올리면 일시정지
+viewBox.on('mouseenter',function(){
+  clearInterval( startInterval );
+});
+*/
+
+/*
+2. viewBox에서 마우스 벗어날 경우 재실행
+viewBox.on('mouseleave',function(){
+  Start();
+});
+*/
+
+// 1,2번기능 통합 / 내용에 괄호 쓰지 않는다.
+viewBox.on({
+  'mouseenter' : StopSlide,
+  'mouseleave' : Start
+})
+
+// jQuery end
 })(jQuery);
 
 // jQuery 선택자
