@@ -91,7 +91,7 @@ h1 { background-color: #33b88f; }
 /* // tab.css */
 
 /* pc.css 960px */
-@media screen and (min-width:960px) and (max-width:1200px) { 
+@media screen and (min-width:960px) { 
   #wrap { width:100vw; margin:auto; background-color: #fff; }
   #max_headBox { position: fixed; height:60px; background-color: #333;  }
   .headBox { width:960px; margin:auto; padding:10px; box-sizing: border-box; height:60px; }
