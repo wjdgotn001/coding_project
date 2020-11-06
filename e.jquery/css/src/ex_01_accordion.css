@@ -17,10 +17,11 @@
 .accordion_01 dt { width: 100%; height:50px; background-color: #067; } 
 .accordion_01 dt > button { 
   width: 100%; height: 100%; color:#fff; font-size:1.2rem; 
-  font-weight:bold; text-align: left; text-indent:16px;  }
+  font-weight:bold; text-align: left; padding:0 1rem; box-sizing: border-box;  }
 .accordion_01 dt > button:hover,
 .accordion_01 dt > button:focus { background-color:#045;}
-
+.accordion_01 dt i { float: right;}
+.accordion_01 dt.action i { transform:rotate(180deg) scale(1.2); color:#ff0; } 
 
 .accordion_01 dd { 
   display: none;

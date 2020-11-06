@@ -1,0 +1,20 @@
+.accor { width:600px; height:auto; }
+
+.accor > dt { 
+  width:600px; height:50px; border-bottom:1px solid #fff; background-color:#067;
+}
+.accor a { 
+  display:block; padding:9px; box-sizing: border-box;
+  width:100%; height:100%; color:#fff; font-size:1.2rem; 
+}
+.accor span { float: right; }
+.accor dd { 
+  display:none;
+  width:600px; height:auto; background-color:#ace; padding:10px 0 10px;  }
+.accor > dt:hover,
+.accor > dt:focus { background-color:#047; }
+
+.accor > dt.action i { transform:rotate(180deg) scale(1.2); color:#fa7; }
+
+
+ 
