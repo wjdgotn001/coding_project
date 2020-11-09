@@ -1,0 +1,44 @@
+/* bestNewBox========================== */
+#bestNewBox { width: 940px; height:1080px; margin:auto; padding:50px 0 70px; background-color: var(--gray4);}
+#bestNewBox h2 { width:100%; height:55px; margin-bottom: 30px; font-size:30px; text-decoration:underline; }
+/* #bestNewBox > ul { class = "clearfix"} */
+#bestNewBox li { 
+  float: left;
+  width:220px; height:410px; margin-right:20px; margin-bottom:50px;
+  background-color: #ffffff; }
+#bestNewBox li:nth-child(4n) { margin-right:0; }
+#bestNewBox li:nth-last-child( -n + 4 ) { margin-bottom:0; }
+#bestNewBox a { position: relative; display:block; height:100%; height:auto; }
+#bestNewBox a::before { 
+  position: absolute; top:0; left:0;
+  content:" "; display:block; width: 100%; height:240px; 
+  opacity:0; transition:all 300ms ease;
+  background-color:var(--color-brown-opacity); }
+  #bestNewBox a::after {
+    content:"새로운 메뉴"; display:block; 
+    position: absolute; top:10%; left:50%; transform:translateX(-50%);
+    padding-top:100px; box-sizing: border-box; 
+    width:50%; height:150px; text-align:center; opacity:0; transition: all 300ms linear 150ms; background-size: 200%;
+    background-repeat: no-repeat; background-position: 50% 200%; background-image: url(../../img/monffee/new_menu/menu_on.png);
+    font-weight:900;
+   }
+
+  #bestNewBox a:hover::before,
+  #bestNewBox a:focus::before { opacity:1; }
+  #bestNewBox a:hover::after,
+  #bestNewBox a:focus::after { opacity:1; background-position-y:80%; }
+
+
+#bestNewBox .news_img { 
+  width:100%; height:240px; background-color:#ccc; border-radius:4px;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover; }
+#bestNewBox dl { width:100%; height:auto; padding:12.8px; box-sizing: border-box; }
+#bestNewBox dt { 
+  width:100%; height:auto; 
+  font-size:19.2px; font-weight:bold; margin-bottom:6px; }
+#bestNewBox dd { 
+  width: 100%; height:auto; letter-spacing:-0.32px; 
+  font-size:16px; line-height:120%; color:var(--color-dark_gray);
+ }

@@ -11,8 +11,10 @@
   
   var headBox = $('#headBox');
   var viewBox = $('#viewBox');
+  var bestNewBox = $('#bestNewBox');  
 
   headBox.load('./monffee/headBox.html');
   viewBox.load('./monffee/viewBox.html');
+  bestNewBox.append('<script src="../js/src/monffee_bestNewBox.js"></script>');
   
 })(jQuery);
