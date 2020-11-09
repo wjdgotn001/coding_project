@@ -12,9 +12,13 @@
   var headBox = $('#headBox');
   var viewBox = $('#viewBox');
   var bestNewBox = $('#bestNewBox');  
+  var issueBox = $('#issueBox');  
 
   headBox.load('./monffee/headBox.html');
   viewBox.load('./monffee/viewBox.html');
   bestNewBox.append('<script src="../js/src/monffee_bestNewBox.js"></script>');
+  issueBox.load('./monffee/issueBox.html', function(){
+    $(this).append('<script src="../js/src/issueBox.js"></script>')
+  });
   
 })(jQuery);
