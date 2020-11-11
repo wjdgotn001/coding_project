@@ -4,10 +4,13 @@
     var slide = $('.slide_02');
     var slideBtnPart = slide.find('.slide_btn');
     var slideBtn = slideBtnPart.children('button');
-
     var indexSlide = slide.find('.index_slide');
     var slideLi = indexSlide.find('li');
     var liLen = slideLi.length;
+
+    var slideN = 0;
+    var permission = true;
+    var timed = 500;
 
     //action클래스이름이 몇번째 있는지 파악하는 기능
     var actionIndex;
@@ -33,20 +36,27 @@
     // indexSlide.find('.action').show();
     var SlideAction = function(){
         slideLi.eq(slideN).show();
-        slideLi.eq(actionIndex).fadeOut(function(){
-          slideLi.eq(slideN).addClass('action');
+        slideLi.eq(actionIndex).fadeOut(timed/2, function(){
           slideLi.eq(slideN).siblings().removeClass('action');
+          slideLi.eq(slideN).addClass('action');
+
+          setTimeout(function(){
+            permission = true;
+          }, timed/100);
         });
-    };
+    }; //SlideAction();
     // =======================
-    var slideN = 0;
+    
 
     slideBtn.on('click', function(e){
         e.preventDefault();
         MyActionIndex();
-        var it =$(this).attr('class');
+
+        if(permission){
+            permission = false;
+            var it =$(this).attr('class');
         
-        if(it === 'next_btn'){
+         if(it === 'next_btn'){
             slideN += 1;
             if( slideN >= liLen ){
                 slideN = 0;
@@ -58,7 +68,7 @@
             // });
             SlideAction();
 
-        }else if( it === 'prev_btn'){
+         }else if( it === 'prev_btn'){
             slideN -= 1;
             // slideLi.eq(slideN).show();
             //      slideLi.eq(actionIndex).fadeOut(function(){
@@ -70,7 +80,10 @@
             if( slideN <= -1 ){
                 slideN = liLen -1;
             } //if()
-        }//if(it === 'prev') End =========
+         }//if(it === 'prev') End =========
+
+        } // if(permission)
+        
     }); // slideBtn.on('click') End =========
 
 })(jQuery);
