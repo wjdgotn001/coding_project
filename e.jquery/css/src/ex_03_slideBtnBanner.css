@@ -5,7 +5,7 @@
 
 .part { 
     position: relative;
-    width:400px; height:auto; padding:0.5rem;
+    width:400px; height:auto; padding:0.5rem; margin-bottom:10px;
      margin:auto; background-color:#d4f; }
 .slide_btn{
     position: absolute; top:50%; left:50%; transform: translate(-50%);
@@ -17,10 +17,10 @@
     font-size:30px; line-height:30px; text-align: center;}
     .slide_btn > button:nth-child(1){ float: right;}
 
-.slide_wrap 
-{ width:400px; height:300px; border:1px solid #333; overflow: hidden;  }
-.slide_wrap > ul { width:500%; height:100%; }
-.slide_wrap li { 
+.slide_wrap  /* overflow: hidden;*/
+{ width:400px; height:300px; border:1px solid #333;  }
+.horizontal_slide > ul { width:500%; height:100%; }
+.horizontal_slide li { 
     float: left; width: 20%; height: 100%; background-color: #fff; 
     text-align: center;  
     padding-top:250px; box-sizing: border-box;
@@ -39,4 +39,24 @@
 .cake_04 { background-image:url("../../img/minicake/minicake/tj_minicake_004.jpg");}
 .cake_05 { background-image:url("../../img/minicake/minicake/tj_minicake_005.jpg");}
 
+/* slide_02 */
+.slide_02 { background-color:#0ac;}
+.slide_02 h2 { color:#fff; font-size:1.2rem; margin-bottom:0.5rem; padding-left:1rem; }
+.slide_02 .slide_wrap { border-radius:1rem; overflow: hidden; border:0; box-shadow: 0 0 0.5rem #333; } 
+.slide_wrap li { border-right:none; }
+.slide_02 .slide_btn { top:40px; left:auto; right:32px; width:80px; transform: translate(0);}
+.slide_02 button { width:35.2px; height:35.2px; color:#fff; font-size:35.2px;}
 
+.index_slide > ul { 
+    position: relative; z-index:100;
+    width: 100%; height: 100%;  }
+
+.index_slide li {
+    /* display:none; */
+    position: absolute; top:0; left:0; 
+    width: 100%; height: 100%; background-color: #fff; 
+    text-align: center; padding-top:250px; box-sizing: border-box;
+    background-repeat: no-repeat;
+    background-position: 50% 20%;
+    background-size: 50% auto; }
+.index_slide li.action { z-index: 100; }

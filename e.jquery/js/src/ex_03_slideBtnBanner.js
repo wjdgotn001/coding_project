@@ -12,7 +12,7 @@
     var before_s_01_Li = s_01_Ul.children('li');
 
     //복제한내용을 맨 앞으로 이동 -> 전체가로값 변경, 내부 li크기 변경해야함.
-    var cloneLastLi_s_01 = before_s_01_Li.eq(-1).clone(true); //복제
+    var cloneLastLi_s_01 = before_s_01_Li.eq(before_s_01_Li.length -1).clone(true); //복제
     s_01_Ul.prepend(cloneLastLi_s_01); 
     var re_s_01_li = s_01_Ul.children('li');
     s_01_Ul.css({ 'width': re_s_01_li.length * 100 + '%' , 'position':'relative', 'left': '-100%' });
@@ -107,7 +107,7 @@ s_01_button.on('click', function(e){
          permission = true;
      }, timed/5);
     });
-    
+
   }//if(permission)End     
 });
 
