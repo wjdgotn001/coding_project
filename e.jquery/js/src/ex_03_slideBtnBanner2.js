@@ -28,12 +28,18 @@
     //action만 살리기
     //1. 
     slideLi.not( $('.action') ).hide(); //not을 제외하고
-    
     //2.
     // slideLi.hide();
     // indexSlide.find('.action').show();
+    var SlideAction = function(){
+        slideLi.eq(slideN).show();
+        slideLi.eq(actionIndex).fadeOut(function(){
+          slideLi.eq(slideN).addClass('action');
+          slideLi.eq(slideN).siblings().removeClass('action');
+        });
+    };
+    // =======================
     var slideN = 0;
-
 
     slideBtn.on('click', function(e){
         e.preventDefault();
@@ -42,27 +48,29 @@
         
         if(it === 'next_btn'){
             slideN += 1;
-            slideLi.eq(slideN).show();
-            slideLi.eq(actionIndex).fadeOut(function(){
-                slideLi.eq(slideN).addClass('action');
-                slideLi.eq(slideN).siblings().removeClass('action');
-            });
-
-            if( slideN > liLen -1 ){
+            if( slideN >= liLen ){
                 slideN = 0;
-            }
+            } //if()
+            // slideLi.eq(slideN).show();
+            // slideLi.eq(actionIndex).fadeOut(function(){
+            //     slideLi.eq(slideN).addClass('action');
+            //     slideLi.eq(slideN).siblings().removeClass('action');
+            // });
+            SlideAction();
 
         }else if( it === 'prev_btn'){
             slideN -= 1;
-            if( slideN < 0 ){
+            // slideLi.eq(slideN).show();
+            //      slideLi.eq(actionIndex).fadeOut(function(){
+            //     slideLi.eq(slideN).addClass('action');
+            //     slideLi.eq(slideN).siblings().removeClass('action');
+            // }); //fadeOut()
+            SlideAction();
+
+            if( slideN <= -1 ){
                 slideN = liLen -1;
-            }
-
+            } //if()
         }//if(it === 'prev') End =========
-        console.log( slideN );
-
     }); // slideBtn.on('click') End =========
-
-
 
 })(jQuery);
