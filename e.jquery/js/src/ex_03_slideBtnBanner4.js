@@ -12,19 +12,24 @@
 
     indiLi.children('a').on('click focus', function(e){
         e.preventDefault();
-
+        
         var it = $(this);
         var itIndex = it.parent('li').index();
-
-        indiLi.eq(itIndex).addClass('action');
-        indiLi.eq(itIndex).siblings().removeClass('action');
         
-        slideLi.eq(itIndex).addClass('action');
-        slideLi.eq(itIndex).siblings().removeClass('action');
+        if(itIndex !== actionLi.index() ){
+            
+            indiLi.eq(itIndex).addClass('action');
+            indiLi.eq(itIndex).siblings().removeClass('action');
+            
+            slideLi.eq(itIndex).addClass('action');
+            slideLi.eq(itIndex).siblings().removeClass('action');
+            actionLi = slideUl.find('.action');
 
-        slideLi.eq(itIndex).fadeIn(function(){
-            slideLi.eq(itIndex).siblings().hide();
-        });
+            slideLi.eq(itIndex).stop().fadeIn(function(){
+                slideLi.not(actionLi).stop().hide();
+            });
+           
+        }
     });
 
     
