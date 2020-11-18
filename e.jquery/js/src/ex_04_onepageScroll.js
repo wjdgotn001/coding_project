@@ -53,16 +53,6 @@ topBtn.on('click', ['a'] , function(e){
 
 });
 
-// ===========================
-// 2번 기능
-var popupDp = $('.popup_dp');
-var popupBtn = popupDp.find('button');
-popupBtn.on('click', function(e){
-    e.preventDefault();
-
-    popupDp.remove();
-});
-
 // navBox클릭시 해당메뉴로 스크롤이동
 navBoxLiA.on('click',function(e){
     e.preventDefault();
@@ -74,6 +64,16 @@ navBoxLiA.on('click',function(e){
 
 });
 
+
+// ===========================
+// 2번 기능
+var popupDp = $('.popup_dp');
+var popupBtn = popupDp.find('button');
+popupBtn.on('click', function(e){
+    e.preventDefault();
+
+    popupDp.remove();
+});
 
 
 })(jQuery);
