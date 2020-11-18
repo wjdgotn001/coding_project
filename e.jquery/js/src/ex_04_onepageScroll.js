@@ -42,30 +42,32 @@ win.on('scroll',function(e){
 (100 < winSt) ? topBtn.stop().fadeIn() : topBtn.stop().fadeOut(); 
 });//win.on
 
+
 // 1-1기능추가
-topBtn.on('click', ['a'] , function(e){
+//클릭시 처리되는 내용을 별도의 함수로 처리
+var liScrollMove = function(e){
     e.preventDefault();
 
     var it = $(this).find('a');
     var itAttr = it.attr('href');                      //a요소의 연결된 선택자를 파악
     var itOffset = $(itAttr).offset().top;             //a요소의 href값이 상단에서 떨어져있는 거리 체크 //top, left만 존재
     $('html, body').animate({ scrollTop : itOffset }); //브라우저를 이동시켜라(스크롤) -> itOffset으로 파악된 거리만큼
+}//liScrollMove();
 
-});
-
+topBtn.on('click', ['a'] ,liScrollMove );
 // navBox클릭시 해당메뉴로 스크롤이동
-navBoxLiA.on('click',function(e){
-    e.preventDefault();
+navBoxLi.on('click', ['a'] ,liScrollMove );
 
-    var it = $(this);
-    var itAttr = it.attr('href');
-    var itOffset = $(itAttr).offset().top;
-    $('html, body').animate({ scrollTop : itOffset }); 
+// javascript  -> 선택자배열.foreach(function(배열요소각각의미, 해당배열요소순서){});
+// jQuery      ->  $.each(배열, function(해당배열요소순서, 순서에맞는각각의배열요소){});
 
+var btnCollection = [topBtn,navBoxLi];
+$.each([topBtn,navBoxLi], function(i,btn){
+    btn.on('click', ['a'],liScrollMove  );
 });
 
 
-// ===========================
+// ============================================================================
 // 2번 기능
 var popupDp = $('.popup_dp');
 var popupBtn = popupDp.find('button');
