@@ -16,7 +16,7 @@
 
 // 반응형 파일 연결
 var deviceSize = function(){
-    var resultDevice; //최종적으로 만들어진 내용물에 대한 변수!!!!!!!!!(함수를 수행하기 전에 작성해야함)
+    var winSize; //최종적으로 만들어진 내용물에 대한 변수!!!!!!!!!(함수를 수행하기 전에 작성해야함)
 
     (function($){
     
@@ -29,6 +29,7 @@ var deviceSize = function(){
             {type:'pcfull'}
         ];
     
+     
         // 최초 가로값 파악
         var win = $(window);
         var beforeWinW = win.outerWidth(true);
@@ -67,9 +68,9 @@ var deviceSize = function(){
         return myType;
         }; //deviceCheck
     
-        var winSize = deviceCheck(beforeWinW);
-        resultDevice = winSize;
-    
+           
+           winSize = deviceCheck(beforeWinW);
+         
         // ========================================================
         win.on('resize', function(){
             
@@ -82,11 +83,11 @@ var deviceSize = function(){
                 location.reload();
             }
         });
-        return resultDevice; 
+        return winSize; 
 
     })(jQuery);
         
-    return resultDevice; //외부에서 확인가능
+    return winSize; //외부에서 확인가능
 
 } //deviceSize
 
