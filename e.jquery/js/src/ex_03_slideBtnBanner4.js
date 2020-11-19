@@ -15,7 +15,6 @@
         
         var it = $(this);
         var itIndex = it.parent('li').index();
-        
         if(itIndex !== actionLi.index() ){
             
             indiLi.eq(itIndex).addClass('action');

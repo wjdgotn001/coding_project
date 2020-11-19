@@ -1,0 +1,14 @@
+#wrap { 
+    width: 100%; height:auto; min-height:500px; margin:auto; padding:32px 0 160px;
+    background-color: rgba(220, 220, 225, 0.7); }
+h1 { text-align: center; margin-bottom:48px;}
+
+#viewBox { 
+    margin-top:48px; width:80%; height:800px; margin:auto;
+    border-radius: 8px; border:2px solid #7aa; padding:32px; box-sizing: border-box;
+}
+#viewBox img { position: absolute; width:100%; height:auto; }
+
+.mobile { position: relative; width:50%; height:100%; border-radius:80px; overflow: hidden; border:10px solid #f00; }
+.tablet { position: relative; width:80%; height:100%; border-radius:48px; overflow: hidden; border:32px dashed #06f; }
+.pc { position: relative; width:300px; height:300px; border-radius:100%; overflow: hidden; box-shadow: 16px 16px 0 rgba(0, 0, 0, 0.5); }

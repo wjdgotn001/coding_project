@@ -75,12 +75,31 @@ body {overflow-x:hidden;}
 #conBox_02 { 
     width: 100%; height:500px; 
     border-bottom: 1px solid #07a; background-color:#faa; }
+.title_tab_style {
+    width:80%; height:700px; margin:auto; box-sizing: border-box;
+    border:1px solid #333; padding:16px; }
+.title_tab_style > dl { 
+    position: relative; width: 100%; height: 100%; background-color: rgba(255, 255, 255, 0.7);}
+.title_tab_style dt { 
+    float: left; width:180px; height:30px; margin-left:1.6px;
+    line-height:30px; text-transform: uppercase; text-align: center;
+    background-color: rosybrown; }
+.title_tab_style dt:first-of-type { margin-left:0; }
+.title_tab_style dt.action { background-color: #079; color:#fff; }
+.title_tab_style dt > a { display:block; width: 100%; height: 100%; font-size:20.8px; }
+.title_tab_style dd { 
+    display:none; 
+    position: absolute; top:50px; left:0;
+    width: 100%; height:auto; min-height:400px; background-color: sandybrown; }
+.title_tab_style dd:nth-of-type(1) { display:block; }
 
 .top_move_btn { 
     position: fixed; right:16px; bottom:48px;
     width:50px; height:90px; background-color: #da0; color:#fff; }
 
-.top_move_btn > a { display:block; width: 100%; height:100%; line-height: 50px; text-align: center; }
+.top_move_btn > a { 
+    display:block; width: 100%; height:100%; 
+    line-height: 50px; text-align: center; }
 
 #footBox { 
     width: 100%; height:300px; 
