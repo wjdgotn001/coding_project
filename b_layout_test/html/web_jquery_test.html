@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<!-- web_jquery_test.html -->
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../fonts/fontawesome_5/css/all.css">
+  
+  <!-- [if IE]>
+    <script src="../ie/modernizr-custom.js"></script>
+    <link rel="shortcut icon" href="../img/icon_01.png" type="image/png" />
+    <![endif]-->
+    
+    <link rel="stylesheet" href="../css/base/common.css">
+    <link rel="stylesheet" href="../css/base/reset.css">
+    
+    <link rel="shortcut icon" href="../img/icon_01.png" type="image/png">
+    <link rel="apple-touch-icon" href="../img/icon_01.png">
+  <link rel="stylesheet" href="../css/web_jquery_test.css">
+  <title>Document</title>
+</head>
+<body>
+  <!-- layout -->
+<div id="wrap">
+  <header id="headBox">
+    <h1><a href="./content.html">로고</a></h1>
+    <nav id="navBox">
+      <h2 class="hidden_context">global navication</h2>
+      <ul>
+        <li><a href="#">menu1</a></li>
+        <li><a href="#">menu2</a></li>
+        <li><a href="#">menu3</a></li>
+        <li><a href="#">menu4</a></li>
+      </ul>
+    </nav>
+  </header>
+
+    <section id="viewBox">
+      <div class="indicator">
+        <div class="indi_btn hidden_wrap">
+          <button type="button" class="next_btn">
+            <i class="fas fa-chevron-right"></i>
+            <span>다음버튼</span>
+          </button>
+
+          <button type="button" class="prev_btn">
+            <i class="fas fa-chevron-left"></i>
+            <span>이전버튼</span>
+          </button>
+        </div>
+
+        <ul class="hidden_wrap">
+          <li class="action"><a href="#"><span>광고영역1</span></a></li>
+          <li><a href="#"><span>광고영역2</span></a></li>
+          <li><a href="#"><span>광고영역3</span></a></li>
+          <li><a href="#"><span>광고영역4</span></a></li>
+          <li><a href="#"><span>광고영역5</span></a></li>
+        </ul>
+
+        
+      </div>
+
+      <div class="view_area">
+        <ul >
+          <li class="view_01 action"><span class="hidden_context">광고내용1</span></li>
+          <li class="view_02"><span class="hidden_context">광고내용2</span></li>
+          <li class="view_03"><span class="hidden_context">광고내용3</span></li>
+          <li class="view_04"><span class="hidden_context">광고내용4</span></li>
+          <li class="view_05"><span class="hidden_context">광고내용5</span></li>
+        </ul>
+      </div>
+    </section>
+    
+    <article id="contentBox">
+    </article>
+    
+    <div class="top_move">
+      <a href="#wrap">
+        <i class="fas fa-arrow-up"></i>
+        <span class="hidden_context">상단으로 이동</span></a>
+    </div>
+    
+
+</div> <!--wrap-->
+
+  <!-- script -->
+  <script src="../js/base/jquery-3.5.1.js"></script>
+  <script src="../js/base/jquery-ui.js"></script>
+  <script src="../js/src/web_jquery_test.js"></script>
+</body>
+</html>
