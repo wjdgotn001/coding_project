@@ -19,6 +19,8 @@
         var moreBtn = more.children('button');
         var liEq;
 
+        partUl.append(inserCode);
+
 
         var moreFn = function(j){
             // 예시1)
