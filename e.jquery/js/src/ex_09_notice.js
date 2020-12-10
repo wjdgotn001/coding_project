@@ -28,7 +28,7 @@
         // ============================================================================================
 
         //기본세팅
-        var myViewLen = 70;//한번에 보이는 갯수 (전체 갯수/화면에 보여질 갯수)
+        var myViewLen = 20;//한번에 보이는 갯수 (전체 갯수/화면에 보여질 갯수)
 
         //게시판 인디케이터 생성하기
         var indiLen = Math.ceil(dataFile.length / myViewLen); //소수점으로 뜨지않도록 Math.ceil();
@@ -39,6 +39,33 @@
             indiLi = indiArea.children('li').eq(indiN);
             indiLi.find('a').text(indiN + 1); //indiN만 쓰게되면 숫자0만 뜨기때문에 +1한다.
         }
+        //인디케이터에 보일 갯수 조정****
+        var indiViewLen = 5;
+        var iv = 0;
+        indiLi = indiArea.children('li');
+        var memoryN;
+        for(; iv < indiLen ; iv+=1 ){
+            if( iv < indiViewLen ){
+                memoryN = iv+1; //보이는 버튼 중 마지막 숫자..
+                continue; //건너뛰어라
+            }else{
+                indiLi.eq(iv).hide();
+            }
+        }
+
+        var nBtn = indiCon.find('.next_notice');
+        var pBtn = indiCon.find('.prev_notice');
+
+        nBtn.on('click',function(e){
+            e.preventDefault();
+            var nbn = memoryN;
+            indiLi.hide();
+            for(; nbn < memoryN+indiViewLen ; nbn += 1){
+                indiLi.eq(nbn).show();
+            }
+            memoryN = nbn;
+        });
+        
 
         // 내용넣기
         var set = function(n){ //클릭하면 바뀔 n이라는 매개변수를 사용
