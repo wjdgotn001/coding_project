@@ -1,0 +1,49 @@
+#wrap { 
+    width: 100%; height:auto; min-height:2000px; background-color: rosybrown; 
+    padding:0 1rem; box-sizing: border-box;
+}
+h1 { width:100%; height: 100%; font-size:1.2rem; text-align: center;}
+
+#headBox { 
+    position: fixed; top:1rem; left:1rem; z-index:100;
+     width:9.375rem; height:2rem; background-color: salmon; }
+
+#viewBox { width:100%; height:100vh; min-height:800px; background-color: seagreen; }
+
+#conBox { 
+    width: 100%; height:150rem;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: contain;
+    background-image: url(../../img/modal/juice_small_02.jpg); }
+
+
+#moreBox { 
+    width:80%; max-width:100rem; min-width:65rem; height:150rem; 
+    margin:auto; background-color: springgreen; }
+    
+h2 { 
+    width:300px; height:3rem; margin:auto; opacity:0; transition: all 1000ms ease;
+    background-color: #f5f; text-align: center; color:#fff; }
+
+    .content_area {
+        opacity: 0; transform: translateY(-5rem);
+        width: 60%; height:400px; margin:50px auto; background-color: #fff;
+        transition: all 500ms linear 800ms;
+      }
+      .action > .content_area{
+        opacity: 1; transform: translateY(0);
+      }
+        
+/* ============================================================== */
+#conBox > h2 {transform: translateY(-5rem); }
+#moreBox > h2 {transform:translateX(-50rem) rotateX(720deg);}
+/* #moreBox > h2 {transform:translateX(-5rem) rotate3D(360deg, 10deg, 720deg, 3turn);} */
+#wrap .action > h2 { opacity:1; transform: translate(0) rotateX(0); }
+#moreBox.action > h2 { transform: translate(0) rotateX(0) scale(1.5); }
+#moreBox.more { background-color: yellowgreen; }
+#moreBox.more > h2 { opacity: 1; }
+
+
+
+#footBox { width: 100%; height:15rem; background-color: tomato; }
