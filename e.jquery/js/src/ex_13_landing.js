@@ -8,7 +8,7 @@
 
     var conBoxOffset = conBox.offset().top;
     var moreBoxOffset = moreBox.offset().top;
-    console.log(conBoxOffset, moreBoxOffset);
+    // console.log(conBoxOffset, moreBoxOffset);
 
 
     win.on('scroll',function(e){
@@ -21,7 +21,7 @@
         if(getScroll >= conBoxOffset - winH){
             conBox.addClass('action');
             conScroll = getScroll - (conBoxOffset - winH);
-            console.log('conScroll:',conScroll);
+            // console.log('conScroll:',conScroll);
             conBox.css({'backgroundPositionY': (conScroll/3)+ 'px'});
 
         }else{

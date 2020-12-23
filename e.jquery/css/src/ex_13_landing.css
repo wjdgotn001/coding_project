@@ -26,14 +26,14 @@ h2 {
     width:300px; height:3rem; margin:auto; opacity:0; transition: all 1000ms ease;
     background-color: #f5f; text-align: center; color:#fff; }
 
-    .content_area {
-        opacity: 0; transform: translateY(-5rem);
-        width: 60%; height:400px; margin:50px auto; background-color: #fff;
-        transition: all 500ms linear 800ms;
-      }
-      .action > .content_area{
-        opacity: 1; transform: translateY(0);
-      }
+.content_area {
+    opacity: 0; transform: translateY(-5rem);
+    width: 60%; height:400px; margin:50px auto; background-color: #fff;
+    transition: all 500ms linear 800ms;
+}
+.action > .content_area{
+  opacity: 1; transform: translateY(0);
+}
         
 /* ============================================================== */
 #conBox > h2 {transform: translateY(-5rem); }

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<!-- 문서이름.html -->
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../fonts/fontawesome_5/css/all.css">
+  
+  <!-- [if IE]>
+    <script src="../ie/modernizr-custom.js"></script>
+    <link rel="shortcut icon" href="../img/icon_01.png" type="image/png" />
+    <![endif]-->
+    
+  <!-- css -->
+  <link rel="stylesheet" href="../css/base/common.css">
+  <link rel="stylesheet" href="../css/base/reset.css">
+  <link rel="stylesheet" href="../css/src/ex_14_parallax2.css">
+  
+  <!-- favicon -->
+  <link rel="shortcut icon" href="../img/icon_01.png" type="image/png">
+  <link rel="apple-touch-icon" href="../img/icon_01.png">
+  <title>페이지이름</title>
+</head>
+<body>
+  <!-- layout -->
+  <div id="wrap">
+    <header id="headBox">
+      <h1 class="hidden_wrap"><a href="./content.html"><span>jQuery-webportfolio</span></a></h1>
+      <!-- 효과처리 이미지 -->
+      <div class="image_area">
+          <div class="front_image"></div>
+          <div class="back_image"></div>
+      </div>
+   </header>
+   <div class="blink_area"></div>
+   <!-- #headBox를 고정하여 스크롤시 하위내용(#subNavBox)요소가 나타나게 하기위한 공백영역 -->
+   <article id="subNavBox">
+       <h2>local navigation</h2>
+       <ul>
+           <li><a href="#"><span>nav_01</span></a></li>
+           <li><a href="#"><span>nav_02</span></a></li>
+           <li><a href="#"><span>nav_03</span></a></li>
+           <li><a href="#"><span>nav_04</span></a></li>
+       </ul>
+   </article>
+   <article id="contentBox">
+       <h2>gallery</h2>
+   </article>
+   <footer id="footBox">
+       <h2>company info</h2>
+   </footer>
+  </div>
+
+  <!-- script -->
+  <script src="../js/base/jquery-3.5.1.js"></script>
+  <script src="../js/base/jquery-ui.js"></script>
+  <script src="../js/src/ex_14_parallax2.js"></script>
+</body>
+</html>
